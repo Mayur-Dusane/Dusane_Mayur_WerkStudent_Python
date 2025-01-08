@@ -1,79 +1,84 @@
+# Invoice Data Extraction Tool for WerkStudent_Python
 
-# WerkStudent_Python
+This Python program extracts invoice data (e.g., dates, values, and tables) from PDF files and saves the results into Excel and CSV files. It uses libraries like `pandas`, `tabula-py`, openpyxl and `JPype1`.
 
-## Overview
+## Features
 
-This repository contains the interview task for the WerkStudent position in Python. The goal is to collect data from two sample invoices, create an Excel file with two sheets, and generate a CSV file. Additionally, an executable file should be provided to run the code.
+- Extracts specific data fields from PDF invoices.
+- Saves extracted data into Excel and CSV files.
 
-## Task Details
+## Requirements
 
-1. **Data Extraction**:
-    - Extract specific values from three sample invoices.
-    - For Sample 1, extract the value shown in the provided image.
-    - <img width="289" alt="image" src="https://github.com/user-attachments/assets/0cf000ff-c305-4ffe-beb4-1c02a04d06b6" />
-    - For Samples 2, extract the value shown in the provided image.
-    - <img width="497" alt="image" src="https://github.com/user-attachments/assets/ea6eb368-604d-4dd4-9235-fbc8ec36d275" />
+- Python 3.9 or higher
+- pandas
+- tabula-py
+- openpyxl
+- JPype1
 
-2. **Excel File Creation**:
-    - Create an Excel file with two sheets:
-        - **Sheet 1**: Contains three columns - File Name, Date (scraped from the document), and Value.
-        - **Sheet 2**: Contains a pivot table with the date and value sum, and also by document name.
+## Installation
 
-3. **CSV File Creation**:
-    - Create a CSV file with all the data, including headers, and use a semicolon (;) as the separator.
+1. **Clone the repository:**
 
-4. **Executable File**:
-    - Provide an executable file (.exe) that can run the code if the files are in the same folder.
+   ```bash
+   git clone https://github.com/Mayur-Dusane/Dusane_Mayur_WerkStudent_Python.git
+   cd Dusane_Mayur_WerkStudent_Python
+   ```
 
-5. **Fork Creation**:
-    - Create a fork of this repository named `LastName_FirstName_WerkStudent_Python` (e.g., `Shovon_Golam_WerkStudent_Python`).
-    - Upload your code to this branch. No need to submit a pull request; the fork will be checked directly.
+2. **Create and activate a virtual environment:**
 
-6. **Documentation**:
-    - Include an explanation in the README file that a non-technical person can understand.
-    - Ensure the code is documented so that a technical person can understand it.
+   ```bash
+   python -m venv myenv
+   myenv\Scripts\activate  # Windows
+   source myenv/bin/activate  # Linux/macOS
+   ```
 
-7. **Problem Reporting**:
-    - If you face any problems or find it impossible to complete a task, document the issue in the README file of your branch. Explain what the problem was and why you were unable to complete it.
+3. **Install dependencies:**
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## How It Works
+4. **Ensure Java is installed:**
 
-1. **Data Extraction**:
-    - The script reads the sample invoices and extracts the required values.
-    - The extracted data is stored in variables for further processing.
+   - Download and install Java from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://openjdk.org/).
+   - Add Java to your system's PATH environment variable.
 
-2. **Excel File Creation**:
-    - The script creates an Excel file with two sheets.
-    - Sheet 1 contains the file name, extracted data, and value.
-    - Sheet 2 contains a pivot table summarizing the data by date and document name.
+5. **Run the program:**
 
-3. **CSV File Creation**:
-    - The script generates a CSV file with the extracted data, including headers, and uses a semicolon as the separator.
+   ```bash
+   python Interview_Problem.py
+   ```
 
-4. **Executable File**:
-    - An executable file is provided to run the entire code. Ensure the sample invoices are in the same folder as the executable file.
+## Usage
 
-5. **Requirements File**:
-    -A requirements.txt file is included to create the environment needed to run the code
+1. Place your PDF files (`sample_invoice_1.pdf` and `sample_invoice_2.pdf`) in the same directory as the script or executable.
 
-## Running the Code
+2. Run the program:
 
-1. Place the sample invoices in the same folder as the executable file.
-2. Run the executable file to execute the code and generate the Excel and CSV files.
+   ```bash
+   python Interview_Problem.py
+   ```
 
+3. Output files:
 
-## Documentation
+   - `sheet_1.xlsx`: Summary of extracted data.
+   - `sheet_2.xlsx`: Pivot table of extracted data.
+   - `Invoice_data.csv`: Combined table data from both PDFs.
 
-- The README file contains a non-technical explanation of the code.
-- The code is documented with comments to help technical users understand its functionality.
+## Troubleshooting
 
-## Problem Reporting
+- **Java Error:**
+  Ensure Java is installed and its path is added to the `PATH` environment variable.
 
-- If you face any problems or find it impossible to complete a task, document the issue in the README file of your branch. Explain what the problem was and why you were unable to complete it.
+- **Empty Output Files:**
+  Verify the structure of the input PDF matches the expected format.
 
-## Timeline
+- **Module Not Found Errors:**
+  Ensure all dependencies are installed by running `pip install -r requirements.txt`.
 
-- The time limit for this task is 9 January 2025. 
+## Acknowledgments
 
-
+- `tabula-py` for PDF data extraction.
+- `pandas` for data manipulation.
+- `openpyxl` for Excel file creation.
+- `JPype1` for enabling interaction with Java-based libraries.
