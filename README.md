@@ -1,6 +1,6 @@
 # Invoice Data Extraction Tool for WerkStudent_Python
 
-This Python program extracts invoice data (e.g., dates, values, and tables) from PDF files and saves the results into Excel and CSV files. It uses libraries like `pandas`, `tabula-py`, openpyxl and `JPype1`.
+This Python program extracts invoice data (e.g., dates, values, and tables) from PDF files and saves the results into Excel and CSV files. It uses libraries like pandas, tabula-py, openpyxl and JPype1.
 
 ## Features
 
